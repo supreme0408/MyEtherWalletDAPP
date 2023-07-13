@@ -19,13 +19,17 @@ A simple wallet to manage crypto assets.
 Deployed using foundry.
 #### Setting up (1) EVMs.
 ==========================
-> Simulated On-chain Traces:
-  > [372335] → new EtherWallet@0x37CF3f31fE4714bDf4329d3FAcBc317C805e24a7
-  > └─ ← 1374 bytes of code
-==========================
->Network name: 'Sepolia Testnetwork'
->Chain id: 11155111
->Estimated gas price: 3.000000036 gwei
->Estimated total gas used for script: 484035
->Estimated amount required: 0.00145210501742526 ETH
-==========================
+
+> Simulated On-chain Traces:<br/>
+  > [372335] → new EtherWallet@0x37CF3f31fE4714bDf4329d3FAcBc317C805e24a7<br/>
+  > └─ ← 1374 bytes of code<br/>
+
+===========================
+
+>Network name: 'Sepolia Testnetwork'<br/>
+>Chain id: 11155111<br/>
+>Estimated gas price: 3.000000036 gwei<br/>
+>Estimated total gas used for script: 484035<br/>
+>Estimated amount required: 0.00145210501742526 ETH<br/>
+
+===========================
