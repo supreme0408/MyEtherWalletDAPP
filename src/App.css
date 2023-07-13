@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+body {
+  background-image: linear-gradient(
+    -135deg,
+    rgb(146, 1, 199),
+    rgb(234, 217, 239)
+  );
+  background-repeat: no-repeat;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.myNavbar-container{
+  display: flex; 
+  justify-content: space-around;
 }
+@media (max-width: 768px) {
+  .myNavbar-container{
+    flex-direction: column;
+    margin-top: 2%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.myNavbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.674);
+  padding: 20px;
+  margin-top: 2%;
+  border-radius: 10px;
+  position: absolute;
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .myNavbar{
+    width: fit-content;
+    position: inherit;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.mynav-link {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 400;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.mynav-link:hover{
+  color: gray;
+}
+.active{
+  text-decoration:overline underline;
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+.myNavbar .nav-link.active {
+  background-color: white; /* Change to your desired color */
+  color: black; /* Change to your desired text color */
+}
+.mycomp1-container{
+  margin-top: 12%;
+  margin-left: 36%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(227, 141, 28);
+  max-width: max-content;
+  padding: 2%;
+  border-radius: 35px;
+}
+@media (max-width: 768px) {
+  .mycomp1-container{
+    margin-left: 3%;
+    margin-top: 24%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mycomp-itm1 .nav-link.active {
+  background-color: black; /* Change to your desired color */
+  color: white; /* Change to your desired text color */
+}
+
+.mycomp-itm1{
+  background-color: rgba(255, 228, 196, 0.521);
+  padding: 8px;
+  border-radius: 20px;
+}
+.mycomp-itm2{
+  margin-top: 2%;
+}
+
+.btn-connect{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  position: absolute;
+  margin-left: 66%;
+  border-radius: 12px;
+  padding: 10px;
+}
+.btn{
+  width: fit-content;
+  padding: 8px;
+  background-color: black;
+  border-color: black;
+}
+@media (max-width: 768px) {
+  .btn-connect{
+    display: flex;
+    position: sticky;
+    margin: 2%;
   }
-  to {
-    transform: rotate(360deg);
+}
+.addr-txt{
+  background-color: plum;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  position: absolute;
+  margin-left: 60%;
+  border-radius: 12px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .addr-txt{
+    margin-left: 2%;
+    margin-top: 54%;
+    width: fit-content;
+  }
+}
+.welcome-container{
+  position: relative;
+  margin-left: 38%;
+  margin-top: 12%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+}
+@media (max-width: 768px) {
+  .welcome-container{
+    position: static;
+    margin-top: 20%;
+    margin-left: 10%;
+  }
+}
+/* table, th, td {
+  border: 2px solid white;
+  padding: 3px;
+} */
+
+.accBal-btn{
+  margin:3px;
+}
+@media (max-width: 768px) {
+  .accBal-btn{
+    margin-top: 17%;
+    position: fixed;
+  }
+}
+.paccstyle{
+  background-color: #2a38b0;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 66%;
+  margin-top: -4%;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .paccstyle{
+    margin-top: -17%;
+  }
+}
+
+.history-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 12%;
+  padding-bottom: 2px;
+  margin-left: 2%;
+}
+
+.accbal-btn{
+  background-color:plum;
+  font-weight:700;
+  font-size:large,;
+  border-radius:20px;
+  padding:5px;
+}
+@media (max-width: 768px) {
+  .accbal-btn{
+    margin-top: 17%;
+    position: fixed;
   }
 }
