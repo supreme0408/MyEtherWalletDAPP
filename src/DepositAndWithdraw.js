@@ -128,6 +128,7 @@ export default function DepositAndWithdraw({currentAddress,isConnect,contract,ac
                                 aria-label="Default"
                                 aria-describedby="inputGroup-sizing-default"
                                 inputMode="numeric"
+                                placeholder="(in ETH)"
                                 id="wtext"
                                 onChange={handleDChange}
                             />
@@ -159,6 +160,7 @@ export default function DepositAndWithdraw({currentAddress,isConnect,contract,ac
                                 aria-label="Default"
                                 aria-describedby="inputGroup-sizing-default"
                                 id="dtext"
+                                placeholder="(in ETH)"
                                 onChange={handleWChange}
                                 inputMode="numeric"
                             />

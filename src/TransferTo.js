@@ -99,6 +99,7 @@ export default function TransferTo({ currentAddress, isConnect, contract, accFun
             aria-label="Default"
             aria-describedby="inputGroup-sizing-default"
             inputMode="numeric"
+            placeholder="(in ETH)"
             id="amttext"
             onChange={handleChangeAmt}
           />
