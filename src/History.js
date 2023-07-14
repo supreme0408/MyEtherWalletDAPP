@@ -158,6 +158,7 @@ export default function History({ contract, web3, allright, isConnect, cA }) {
               <thead>
                 <tr>
                   <th>#</th>
+                  <th>Type</th>
                   <th>Amount</th>
                   <th>Time</th>
                 </tr>
@@ -168,6 +169,7 @@ export default function History({ contract, web3, allright, isConnect, cA }) {
                     <React.Fragment key={index}>
                       <tr>
                         <td>{index}</td>
+                        <td>{itm.returnValues[2]}</td>
                         <td>{trimToETH(itm.returnValues[1])} ETH</td>
                         <td>{formatTimestamp(itm.timestamp)}</td>
                       </tr>
@@ -256,15 +258,25 @@ export default function History({ contract, web3, allright, isConnect, cA }) {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const dEvents = await getEventData('DW', { user: cA, messege: "Deposit" });
-      const wEvents = await getEventData('DW', { user: cA, messege: "Withdraw" });
+      const dEvents = await getEventData('DW', { user:cA });
+      //const wEvents = await getEventData('DW', { messege: "Withdraw"});
       const tEvents = await getEventData('Transfer', { from: cA });
       const tEvents2 = await getEventData('Transfer', { to: cA });
       const combinedEvent = tEvents.concat(tEvents2);
+      const uniqueEvents = [];
+      const seen = {};
+
+      combinedEvent.forEach((event) =>{
+        const eventKey = event.returnValues[0] - event.returnValues[1];
+        if(!seen[eventKey]){
+          seen[eventKey] = true;
+          uniqueEvents.push(event);
+        } 
+      });
 
       setDEventData(dEvents);
-      setWEventData(wEvents);
-      setTEventData(combinedEvent);
+      //setWEventData(wEvents);
+      setTEventData(uniqueEvents);
       //logs for testing
       // if(dEventData!==null){
       //   console.log(dEventData[0].returnValues[0]);
@@ -278,8 +290,8 @@ export default function History({ contract, web3, allright, isConnect, cA }) {
   return (
     <div className='history-container'>
 
-      {renderDWEventData(dEventData, "Deposit Data")}
-      {renderDWEventData(wEventData, "Withdrawal Data")}
+      {renderDWEventData(dEventData, "Deposit/Withdraw Data")}
+      {/* {renderDWEventData(wEventData, "Withdrawal Data")} */}
       {renderTransferEventData(tEventData)}
       
     </div>

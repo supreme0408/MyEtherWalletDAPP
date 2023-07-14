@@ -173,11 +173,15 @@ body {
 
 .history-container{
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   margin-top: 12%;
   padding-bottom: 2px;
   margin-left: 2%;
+}
+@media (max-width: 768px) {
+  .history-container{
+    flex-direction: column;
+  }
 }
 
 .accbal-btn{
