@@ -15,7 +15,7 @@ A simple wallet to manage crypto assets.
 3. Transfer: Transfer native crypto token to other account.
 4. Get Transaction History: Details of transaction.
 
-### Deploying detils
+### Deploying details
 Deployed using foundry.
 #### Setting up (1) EVMs.
 ==========================
