@@ -152,8 +152,8 @@ export default function History({ contract, web3, allright, isConnect, cA }) {
       const dEvents = await getEventData('DW', { user: cA });
       //const wEvents = await getEventData('DW', { messege: "Withdraw"});
       const tEvents = await getEventData('Transfer', { from: cA });
-      // const tEvents2 = await getEventData('Transfer', { to: cA });
-      // const combinedEvent = tEvents.concat(tEvents2);
+      const tEvents2 = await getEventData('Transfer', { to: cA });
+      const combinedEvent = tEvents.concat(tEvents2);
       // const uniqueEvents = [];
       // const seen = {};
 
@@ -167,7 +167,7 @@ export default function History({ contract, web3, allright, isConnect, cA }) {
 
       setDEventData(dEvents);
       //setWEventData(wEvents);
-      setTEventData(tEvents);
+      setTEventData(combinedEvent);
       //logs for testing
       // if(dEventData!==null){
       //   console.log(dEventData[0].returnValues[0]);
